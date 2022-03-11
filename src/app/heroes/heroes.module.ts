@@ -15,6 +15,7 @@ import { ListadoComponent } from './pages/listado/listado.component';
 import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeroesHomeComponent,
     ListadoComponent,
     HeroeCardComponent,
-    ImagenPipe
+    ImagenPipe,
+    ConfirmarComponent
   ],
   imports: [
     CommonModule,
