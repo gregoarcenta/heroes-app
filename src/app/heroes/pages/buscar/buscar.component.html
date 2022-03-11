@@ -1,0 +1,25 @@
+<div>
+  <div>
+    <h1>Buscador de heroes</h1>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div style="padding:1rem;" fxLayout="row" fxLayoutAlign="center">
+    <form [formGroup]="heroesForm" fxFlex="50">
+      <mat-form-field appearance="fill" fxLayout="column">
+        <mat-label>Heroe</mat-label>
+        <input type="text" placeholder="Buscar heroe..." matInput formControlName="termino" [matAutocomplete]="auto"
+          (input)="buscando()">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="opcionSeleccionada($event)">
+          <mat-option *ngFor="let heroe of heroes" [value]="heroe">
+            {{heroe.superhero}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <div *ngIf="heroes.length === 0 && heroesForm.value.termino.trim().length > 0">
+        No se han encontrado resultados con el termino "{{heroesForm.value.termino}}"
+      </div>
+    </form>
+  </div>
+</div>
