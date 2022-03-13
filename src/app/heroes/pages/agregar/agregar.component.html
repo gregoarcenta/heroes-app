@@ -1,4 +1,5 @@
-<h1 style="text-align: center; margin: 2rem 0;">{{(heroe.id)? 'Editar': 'Nuevo'}} heroe {{heroe.superhero}}</h1>
+<h1 style="text-align: center; margin: 2rem 0;">{{(heroe)? 'Editar': 'Nuevo'}} heroe {{(heroe)? heroe.superhero: ''}}
+</h1>
 
 <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="40px" fxLayoutAlign="center">
 
@@ -33,14 +34,15 @@
 
     <mat-form-field>
       <mat-label>Foto Url</mat-label>
-      <input type="text" matInput required formControlName="alt_img">
+      <input type="text" matInput formControlName="alt_img">
     </mat-form-field>
     <br>
     <button mat-raised-button color="primary">Guardar</button>
   </form>
 
   <div fxFlexOrder="1" fxFlex.lt-sm="100" fxFlex.gt-xs="40" fxFlex.md="30" fxFlex.lg="20">
-    <img [src]="heroe | imagen" [alt]="heroe.superhero" style="max-width: 100%; height: auto; border-radius: 5px;">
+    <img [src]="heroe | imagen" [alt]="(heroe)? heroe.superhero:'imagen heroe'"
+      style="max-width: 100%; height: auto; border-radius: 5px;">
   </div>
 
 </div>

@@ -28,7 +28,9 @@
       <div>
         <button mat-raised-button color="warn" style="margin-right: 5px;"
           (click)="eliminarHeroe(heroe)">Eliminar</button>
-        <a [routerLink]="['./listado']" mat-raised-button color="accent">Regresar</a>
+        <a [routerLink]="['./listado']" mat-button color="primary">
+          Regresar a la lista de heroes
+        </a>
       </div>
     </div>
   </div>
