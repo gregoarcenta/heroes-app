@@ -8,8 +8,7 @@ import { HeroesService } from '../../services/heroes.service';
 @Component({
   selector: 'app-agregar',
   templateUrl: './agregar.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class AgregarComponent implements OnInit {
 
@@ -39,7 +38,6 @@ export class AgregarComponent implements OnInit {
     private fb: FormBuilder,
     private heroeService: HeroesService,
     private route: ActivatedRoute,
-    private router: Router,
     private _snackBar: MatSnackBar
   ) { }
 

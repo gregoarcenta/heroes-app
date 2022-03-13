@@ -1,8 +1,8 @@
-<h1>{{(heroe.id)? 'Editar': 'Nuevo'}} heroe {{heroe.superhero}}</h1>
+<h1 style="text-align: center; margin: 2rem 0;">{{(heroe.id)? 'Editar': 'Nuevo'}} heroe {{heroe.superhero}}</h1>
 
-<div fxLayout="row" fxLayoutGap="40px">
+<div fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="40px" fxLayoutAlign="center">
 
-  <form [formGroup]="heroeForm" fxFlex="50" fxLayout="column" (ngSubmit)="guardarHeroe()">
+  <form [formGroup]="heroeForm" fxFlex="40" fxFlexOrder="2" fxLayout="column" (ngSubmit)="guardarHeroe()">
 
     <mat-form-field>
       <mat-label>Super Heroe</mat-label>
@@ -39,8 +39,8 @@
     <button mat-raised-button color="primary">Guardar</button>
   </form>
 
-  <div fxFlex="50">
-    <img [src]="heroe | imagen" [alt]="heroe.superhero">
+  <div fxFlexOrder="1" fxFlex.lt-sm="100" fxFlex.gt-xs="40" fxFlex.md="30" fxFlex.lg="20">
+    <img [src]="heroe | imagen" [alt]="heroe.superhero" style="max-width: 100%; height: auto; border-radius: 5px;">
   </div>
 
 </div>

@@ -6,10 +6,10 @@
 
 <ng-template #divHeroe>
   <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.gt-xs="30px">
-    <div fxFlex="100" fxFlex.gt-xs="40">
+    <div fxFlex="100" fxFlex.sm="40" fxFlex.md="30" fxFlex.lg="20">
       <img [src]="heroe | imagen" [alt]="heroe.alter_ego">
     </div>
-    <div fxFlex="100" fxFlex.gt-xs="40">
+    <div fxFlex="100" fxFlex.sm="40" fxFlex.md="50" fxFlex.lg="70">
       <div>
         <h2>{{heroe.superhero}}</h2>
         <p>

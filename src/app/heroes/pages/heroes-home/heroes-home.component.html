@@ -1,25 +1,3 @@
-<!-- <h1>HeroesApp</h1>
-
-<hr>
-
-<ul>
-  <li>
-    <a [routerLink]="['/heroes/listado']">Ir a listado</a>
-  </li>
-  <li>
-    <a [routerLink]="['/heroes/agregar']">Ir a agregar</a>
-  </li>
-  <li>
-    <a [routerLink]="['/heroes/editar/1']">Ir a aditar</a>
-  </li>
-  <li>
-    <a [routerLink]="['/heroes/buscar']">Ir a buscar</a>
-  </li>
-  <li>
-    <a [routerLink]="['/heroes/1']">Ir a ver heroe</a>
-  </li>
-</ul> -->
-
 <mat-sidenav-container fullscreen class="example-container" (backdropClick)="sidenav.close()">
 
   <mat-sidenav #sidenav mode="push" (keydown.escape)="sidenav.close()" disableClose>
@@ -63,7 +41,10 @@
         <button mat-icon-button>
           <mat-icon>share</mat-icon>
         </button>
-        <button mat-flat-button color="accent" class="btn-logout">Logout</button>
+        <span>{{getUser.usuario}}</span>
+        <button mat-flat-button color="accent" class="btn-logout" (click)="logout()">
+          Logout
+        </button>
       </div>
     </mat-toolbar>
 

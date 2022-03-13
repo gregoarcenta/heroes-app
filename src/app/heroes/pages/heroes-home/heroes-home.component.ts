@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-heroes-home',
@@ -15,9 +16,20 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class HeroesHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  get getUser() {
+    return this.authService.getUser
+  }
+
+  logout() {
+    this.authService.logout()
+    this.router.navigate(['/auth'])
   }
 
 }
