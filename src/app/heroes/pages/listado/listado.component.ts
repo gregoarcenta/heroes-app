@@ -18,9 +18,17 @@ export class ListadoComponent implements OnInit {
   constructor(private heroeService: HeroesService) { }
 
   ngOnInit(): void {
-    this.heroeService.getHeroes().subscribe(heroes => {
-      this.heroes = heroes
-    })
+    const heroesString = localStorage.getItem('heroes')
+
+    if (!heroesString) {
+      this.heroeService.getHeroes().subscribe(heroes => {
+        this.heroes = heroes
+        localStorage.setItem('heroes', JSON.stringify(this.heroes))
+      })
+    } else {
+      this.heroes = JSON.parse(heroesString)
+    }
+
   }
 
 }
