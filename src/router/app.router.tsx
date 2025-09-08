@@ -1,18 +1,19 @@
 import { createBrowserRouter, Navigate } from "react-router";
-import { Suspense, type JSX } from "react";
 
+//Layouts
 import { AdminLayout } from "@/admin/layouts/AdminLayout";
-import { AdminPage } from "@/admin/pages/AdminPage";
-
 import { HeroesLayout } from "@/heroes/layouts/HeroesLayout";
-import { HomePage } from "@/heroes/pages/home/HomePage";
 
-//Lazy loaded components
+//Pages
+import AdminPage from "@/admin/pages/AdminPage";
+import HomePage from "@/heroes/pages/home/HomePage";
+
+//Lazy loaded pages
 import { HeroPage, SearchPage } from "./lazy.router";
 
-const withSuspense = (element: JSX.Element) => (
-  <Suspense fallback={<div>Cargando...</div>}>{element}</Suspense>
-);
+// const withSuspense = (element: JSX.Element) => (
+//   <Suspense fallback={<div>Cargando...</div>}>{element}</Suspense>
+// );
 
 export const appRouter = createBrowserRouter([
   {
@@ -25,11 +26,13 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "hero/1",
-        element: withSuspense(<HeroPage />)
+        // element: withSuspense(<HeroPage />)
+        element: <HeroPage />
       },
       {
         path: "search",
-        element: withSuspense(<SearchPage />)
+        // element: withSuspense(<SearchPage />)
+        element: <SearchPage />
       }
     ]
   },
