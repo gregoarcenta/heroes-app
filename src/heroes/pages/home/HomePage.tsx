@@ -5,6 +5,7 @@ import { HeroStats } from "@/heroes/components/HeroStats";
 import { HeroGrid } from "@/heroes/components/HeroGrid";
 import { useState } from "react";
 import { CustomPagination } from "@/components/custom/CustomPagination";
+import { CustomBreadCrumbs } from "@/components/custom/CustomBreadCrumbs";
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -15,6 +16,16 @@ const HomePage = () => {
       <CustomJumbotrom
         title="Universo de SuperHéroes"
         description="Descubre, explora y administra super héroes y villanos"
+      />
+
+      <CustomBreadCrumbs
+        currentPage="Super héroes"
+        // breadcrumbs={[
+        //   { label: "Home1", to: "/" },
+        //   { label: "Home2", to: "/" },
+        //   { label: "Home3", to: "/" },
+        //   { label: "Home4", to: "/" }
+        // ]}
       />
 
       {/* Stats Dashboard */}
