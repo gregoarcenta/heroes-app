@@ -22,19 +22,23 @@ export const appRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />
+        element: <HomePage />,
       },
       {
-        path: "hero/1",
+        path: "hero/:slugId",
         // element: withSuspense(<HeroPage />)
-        element: <HeroPage />
+        element: <HeroPage />,
       },
       {
         path: "search",
         // element: withSuspense(<SearchPage />)
-        element: <SearchPage />
-      }
-    ]
+        element: <SearchPage />,
+      },
+      {
+        path: "*",
+        element: <Navigate to={"/"} />,
+      },
+    ],
   },
   {
     path: "admin",
@@ -42,12 +46,8 @@ export const appRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <AdminPage />
-      }
-    ]
+        element: <AdminPage />,
+      },
+    ],
   },
-  {
-    path: "*",
-    element: <Navigate to={"/"} />
-  }
 ]);
