@@ -3,8 +3,16 @@ import type { HeroesResponse } from "@/heroes/interfaces/heroes.response.ts";
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
-export const getHeroesByPageAction = async (): Promise<HeroesResponse> => {
-  const { data } = await heroApi.get<HeroesResponse>("/");
+export const getHeroesByPageAction = async (
+  page: number,
+  limit: number,
+): Promise<HeroesResponse> => {
+  const { data } = await heroApi.get<HeroesResponse>("/", {
+    params: {
+      limit,
+      offset: (page - 1) * limit,
+    },
+  });
 
   return {
     ...data,

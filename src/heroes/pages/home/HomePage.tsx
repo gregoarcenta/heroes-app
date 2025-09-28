@@ -1,27 +1,43 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useSearchParams } from "react-router";
+import { useQuery } from "@tanstack/react-query";
 import { Heart } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CustomJumbotrom } from "@/components/custom/CustomJumbotron";
 import { HeroStats } from "@/heroes/components/HeroStats";
 import { HeroGrid } from "@/heroes/components/HeroGrid";
-import { useState } from "react";
 import { CustomPagination } from "@/components/custom/CustomPagination";
 import { CustomBreadCrumbs } from "@/components/custom/CustomBreadCrumbs.tsx";
-import { useQuery } from "@tanstack/react-query";
 import { getHeroesByPageAction } from "@/heroes/actions/get-heros-by-page.action.ts";
 import type { HeroesResponse } from "@/heroes/interfaces/heroes.response.ts";
+import { isValidNumber } from "@/lib/utils.ts";
+
+const allowedTabs = ["all", "favorites", "heroes", "villains"] as const;
+type Tab = (typeof allowedTabs)[number];
+
+function isTab(value: unknown): value is Tab {
+  return typeof value === "string" && allowedTabs.includes(value as Tab);
+}
 
 const HomePage = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const { data, isLoading } = useQuery<HeroesResponse>({
-    queryKey: ["heroes"],
-    queryFn: () => getHeroesByPageAction(),
+  const tabParam = searchParams.get("tab");
+  const pageParam = searchParams.get("page");
+  const limitParam = searchParams.get("limit");
+
+  const activeTab: Tab = isTab(tabParam) ? tabParam : "all";
+  const page = isValidNumber(pageParam) ? pageParam : "1";
+  const limit = isValidNumber(limitParam) ? limitParam : "6";
+
+  const setActiveTab = (tab: Tab) => {
+    setSearchParams({ tab, page, limit }, { replace: true });
+  };
+
+  const { data } = useQuery<HeroesResponse>({
+    queryKey: ["heroes", { page, limit }],
+    queryFn: () => getHeroesByPageAction(+page, +limit),
     staleTime: 1000 * 60 * 5, // 5 minutos
   });
-
-  if (isLoading) {
-    return <p>Cargando</p>;
-  }
 
   return (
     <>
@@ -31,15 +47,7 @@ const HomePage = () => {
         description="Descubre, explora y administra super héroes y villanos"
       />
 
-      <CustomBreadCrumbs
-        currentPage="Super héroes"
-        // breadcrumbs={[
-        //   { label: "Home1", to: "/" },
-        //   { label: "Home2", to: "/" },
-        //   { label: "Home3", to: "/" },
-        //   { label: "Home4", to: "/" }
-        // ]}
-      />
+      <CustomBreadCrumbs currentPage="Super héroes" />
 
       {/* Stats Dashboard */}
       <HeroStats />
@@ -71,7 +79,7 @@ const HomePage = () => {
 
         <TabsContent value="all">
           {/* Character Grid */}
-          <HeroGrid heroes={data!.heroes!} />
+          <HeroGrid heroes={data?.heroes || []} />
         </TabsContent>
         <TabsContent value="favorites">
           {/* Mostrar todos los favoritos */}
@@ -91,7 +99,7 @@ const HomePage = () => {
       </Tabs>
 
       {/* Pagination */}
-      <CustomPagination totalPages={2} />
+      <CustomPagination totalPages={data?.pages || 1} currentPage={+page} />
     </>
   );
 };
