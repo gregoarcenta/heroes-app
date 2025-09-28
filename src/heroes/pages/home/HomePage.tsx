@@ -62,11 +62,9 @@ const HomePage = () => {
           <h1>Heroes favoritos</h1>
         </TabsContent>
         <TabsContent value="heroes">
-          <h1>Heroes</h1>
           <HeroGrid heroes={heroesResponse?.heroes || []} />
         </TabsContent>
         <TabsContent value="villains">
-          <h1>Villanos</h1>
           <HeroGrid heroes={heroesResponse?.heroes || []} />
         </TabsContent>
       </Tabs>
