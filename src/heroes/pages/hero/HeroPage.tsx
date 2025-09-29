@@ -1,8 +1,18 @@
 import { Navigate, useParams } from "react-router";
 import { Badge } from "@/components/ui/badge.tsx";
 import { Award, Brain, Gauge, Shield, Star, Users, Zap } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.tsx";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs.tsx";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card.tsx";
 import { Progress } from "@/components/ui/progress.tsx";
 import { useQuery } from "@tanstack/react-query";
 import { getHeroAction } from "@/heroes/actions/get-hero.action.ts";
