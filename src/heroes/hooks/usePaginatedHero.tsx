@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import type { HeroesResponse } from "@/heroes/interfaces/heroes.response.ts";
 import { getHeroesByPageAction } from "@/heroes/actions/get-heros-by-page.action.ts";
-import type { Category } from "@/heroes/hooks/useHomeQueryParams.tsx";
+import type { Category } from "@/heroes/hooks/useHomePageQueryParams.tsx";
 
 export const usePaginatedHero = (
   page: number,

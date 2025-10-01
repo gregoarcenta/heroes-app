@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Brain, Eye, Gauge, Heart, Shield, Zap } from "lucide-react";
 import type { Hero } from "@/heroes/interfaces/hero.interface.ts";
-import { FavoriteHeroContext } from "@/heroes/context/FavoriteHeroContext.tsx";
+import { FavoriteHeroContext } from "@/heroes/context/heroContext.ts";
 
 interface Props {
   hero: Hero;
@@ -18,7 +18,8 @@ export const HeroGridCard = ({ hero }: Props) => {
   const { isFavorite, toggleFavorite } = use(FavoriteHeroContext);
 
   const handleClick = (slug: string) => {
-    navigate(`hero/${slug}`);
+    console.log(slug);
+    navigate(`/hero/${slug}`);
   };
 
   return (
@@ -40,7 +41,7 @@ export const HeroGridCard = ({ hero }: Props) => {
             variant="secondary"
             className="text-xs bg-white/90 text-gray-700"
           >
-            {hero.status}
+            {hero.status === "Active" ? "Activo" : "Inactivo"}
           </Badge>
         </div>
 
@@ -141,7 +142,7 @@ export const HeroGridCard = ({ hero }: Props) => {
 
         {/* Powers */}
         <div className="space-y-2">
-          <h4 className="font-medium text-sm">Powers:</h4>
+          <h4 className="font-medium text-sm">Poderes:</h4>
           <div className="flex flex-wrap gap-1">
             {hero.powers.slice(0, 3).map((power) => (
               <Badge variant="outline" className="text-xs" key={power}>
@@ -158,7 +159,7 @@ export const HeroGridCard = ({ hero }: Props) => {
         </div>
 
         <div className="text-xs text-gray-500 pt-2 border-t">
-          First appeared: {hero.firstAppearance}
+          Primera aparición: {hero.firstAppearance}
         </div>
       </CardContent>
     </Card>

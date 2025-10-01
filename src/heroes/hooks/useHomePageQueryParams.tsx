@@ -16,7 +16,7 @@ function isCategory(value: unknown): value is Category {
   );
 }
 
-export const useHomeQueryParams = () => {
+export const useHomePageQueryParams = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const tabParam = searchParams.get("tab");

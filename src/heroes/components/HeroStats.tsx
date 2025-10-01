@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { HeroStatCard } from "./HeroStatCard";
 import { useHeroSummary } from "@/heroes/hooks/useHeroSummary.tsx";
 import { use } from "react";
-import { FavoriteHeroContext } from "@/heroes/context/FavoriteHeroContext.tsx";
+import { FavoriteHeroContext } from "@/heroes/context/heroContext.ts";
 
 export const HeroStats = () => {
   const { data: summary } = useHeroSummary();
@@ -29,7 +29,7 @@ export const HeroStats = () => {
             {summary?.heroCount} Heroes
           </Badge>
           <Badge variant="destructive" className="text-xs">
-            {summary?.villainCount} Villains
+            {summary?.villainCount} Villanos
           </Badge>
         </div>
       </HeroStatCard>
@@ -50,7 +50,7 @@ export const HeroStats = () => {
       >
         <div className="text-lg font-bold">{summary?.strongestHero.alias}</div>
         <p className="text-xs text-muted-foreground">
-          Strength: {summary?.strongestHero.strength}/10
+          Fuerza: {summary?.strongestHero.strength}/10
         </p>
       </HeroStatCard>
 
@@ -60,7 +60,7 @@ export const HeroStats = () => {
       >
         <div className="text-lg font-bold">{summary?.smartestHero.alias}</div>
         <p className="text-xs text-muted-foreground">
-          Intelligence: {summary?.smartestHero.intelligence}/10
+          Inteligencia: {summary?.smartestHero.intelligence}/10
         </p>
       </HeroStatCard>
     </div>

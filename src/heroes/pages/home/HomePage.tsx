@@ -9,14 +9,14 @@ import { HeroStats } from "@/heroes/components/HeroStats";
 import { HeroGrid } from "@/heroes/components/HeroGrid";
 import { useHeroSummary } from "@/heroes/hooks/useHeroSummary.tsx";
 import { usePaginatedHero } from "@/heroes/hooks/usePaginatedHero.tsx";
-import { useHomeQueryParams } from "@/heroes/hooks/useHomeQueryParams.tsx";
-import { FavoriteHeroContext } from "@/heroes/context/FavoriteHeroContext.tsx";
+import { useHomePageQueryParams } from "@/heroes/hooks/useHomePageQueryParams.tsx";
+import { FavoriteHeroContext } from "@/heroes/context/heroContext.ts";
 
 const HomePage = () => {
   const { favorites, favoriteCount } = use(FavoriteHeroContext);
 
   const { page, limit, activeTab, category, setActiveTab } =
-    useHomeQueryParams();
+    useHomePageQueryParams();
 
   const { data: summary } = useHeroSummary();
   const { data: heroesResponse } = usePaginatedHero(+page, +limit, category);

@@ -1,16 +1,7 @@
-import { createContext, type PropsWithChildren, useEffect, useState } from "react";
-import * as z from "zod";
+import { type PropsWithChildren, useEffect, useState } from "react";
 import type { Hero } from "@/heroes/interfaces/hero.interface.ts";
-
-interface FavoriteHeroContext {
-  //state
-  favorites: Hero[];
-  favoriteCount: number;
-
-  // methods
-  isFavorite: (hero: Hero) => boolean;
-  toggleFavorite: (hero: Hero) => void;
-}
+import { FavoriteHeroContext } from "@/heroes/context/heroContext.ts";
+import * as z from "zod";
 
 const heroSchema = z.object({
   id: z.string(),
@@ -32,9 +23,6 @@ const heroSchema = z.object({
 });
 
 const favoritesSchema = z.array(heroSchema);
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const FavoriteHeroContext = createContext({} as FavoriteHeroContext);
 
 const getFavoritesFromLocalStorage = (): Hero[] => {
   const favorites = localStorage.getItem("favorites");

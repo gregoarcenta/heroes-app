@@ -1,6 +1,6 @@
 import { heroApi } from "@/heroes/api/hero.api.ts";
 import type { HeroesResponse } from "@/heroes/interfaces/heroes.response.ts";
-import type { Category } from "@/heroes/hooks/useHomeQueryParams.tsx";
+import type { Category } from "@/heroes/hooks/useHomePageQueryParams.tsx";
 
 const BASE_URL = import.meta.env.VITE_API_URL;
 
