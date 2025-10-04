@@ -1,0 +1,773 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchPage > should call search action with category parameter 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+    <button
+      class="cursor-pointer px-4 py-2 border rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+    >
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchPage > should call search action with name parameter 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+    <button
+      class="cursor-pointer px-4 py-2 border rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+    >
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchPage > should call search action with status parameter 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+    <button
+      class="cursor-pointer px-4 py-2 border rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+    >
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchPage > should call search action with strength and name parameters 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+    <button
+      class="cursor-pointer px-4 py-2 border rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+    >
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchPage > should call search action with strength parameter 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+    <button
+      class="cursor-pointer px-4 py-2 border rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+    >
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchPage > should call search action with universe parameter 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+    <button
+      class="cursor-pointer px-4 py-2 border rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+    >
+      Limpiar filtros
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchPage > should render SearchPage with default values 1`] = `
+<div>
+  <div
+    data-testid="custom-jumbotron"
+  />
+  <nav
+    aria-label="breadcrumb"
+    class="my-5"
+    data-slot="breadcrumb"
+  >
+    <ol
+      class="text-muted-foreground flex flex-wrap items-center gap-1.5 text-sm break-words sm:gap-2.5"
+      data-slot="breadcrumb-list"
+    >
+      <li
+        class="inline-flex items-center gap-1.5"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-discover="true"
+          data-slot="breadcrumb-link"
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="[&>svg]:size-3.5"
+        data-slot="breadcrumb-separator"
+        role="presentation"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-slash"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 2 2 22"
+          />
+        </svg>
+      </li>
+      <li
+        class="inline-flex items-center gap-1.5 text-black"
+        data-slot="breadcrumb-item"
+      >
+        <a
+          class="hover:text-foreground transition-colors"
+          data-slot="breadcrumb-link"
+        >
+          Buscador de héroes
+        </a>
+      </li>
+    </ol>
+  </nav>
+  <div>
+    Cargando...
+  </div>
+  <div
+    data-testid="search-controls"
+  />
+  <div
+    class="flex flex-col items-center justify-center py-20 px-6 text-center bg-white rounded-lg shadow-sm border"
+  >
+    <div
+      class="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6"
+    >
+      <svg
+        class="h-8 w-8 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <h2
+      class="text-xl font-semibold text-gray-800 mb-2"
+    >
+      No se encontraron resultados
+    </h2>
+    <p
+      class="text-gray-500 max-w-md mb-6"
+    >
+      Intenta ajustar los filtros o realizar una búsqueda 
+       para encontrar lo que buscas.
+    </p>
+  </div>
+</div>
+`;

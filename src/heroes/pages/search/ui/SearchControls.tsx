@@ -5,7 +5,11 @@ import { Filter, Grid, Search, SortAsc } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { useSearchPageQueryParams } from "@/heroes/hooks/useSearchPageQueryParams";
 import { isValidNumber } from "@/lib/utils";
-import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+} from "@/components/ui/accordion";
 
 import { ComboboxControl } from "@/heroes/pages/search/ui/ComboboxControl";
 
@@ -106,7 +110,12 @@ export const SearchControls = () => {
       </div>
 
       {/* Advanced Filters */}
-      <Accordion type="single" collapsible value={isAdvancedFilters.toString()}>
+      <Accordion
+        type="single"
+        collapsible
+        value={isAdvancedFilters.toString()}
+        data-testid="accordion"
+      >
         <AccordionItem value="true">
           <AccordionContent>
             <div className="bg-white rounded-lg p-6 mb-8 shadow-sm border">

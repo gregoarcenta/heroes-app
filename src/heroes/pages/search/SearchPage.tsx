@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { CustomJumbotrom } from "@/components/custom/CustomJumbotron";
+import { CustomJumbotron } from "@/components/custom/CustomJumbotron";
 import { SearchControls } from "./ui/SearchControls";
 import { HeroStats } from "@/heroes/components/HeroStats";
 import { CustomBreadCrumbs } from "@/components/custom/CustomBreadCrumbs";
@@ -19,7 +19,7 @@ export const SearchPage = React.memo(() => {
 
   return (
     <>
-      <CustomJumbotrom
+      <CustomJumbotron
         title="Búsqueda de SuperHéroes"
         description="Descubre, explora y administra super héroes y villanos"
       />

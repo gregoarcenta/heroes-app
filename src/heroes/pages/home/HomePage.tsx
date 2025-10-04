@@ -1,7 +1,7 @@
 import { use } from "react";
 import { Heart } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CustomJumbotrom } from "@/components/custom/CustomJumbotron";
+import { CustomJumbotron } from "@/components/custom/CustomJumbotron";
 import { CustomPagination } from "@/components/custom/CustomPagination";
 import { CustomBreadCrumbs } from "@/components/custom/CustomBreadCrumbs.tsx";
 
@@ -24,7 +24,7 @@ const HomePage = () => {
   return (
     <>
       {/* Header */}
-      <CustomJumbotrom
+      <CustomJumbotron
         title="Universo de SuperHéroes"
         description="Descubre, explora y administra super héroes y villanos"
       />
