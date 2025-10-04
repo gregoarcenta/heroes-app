@@ -18,7 +18,6 @@ export const HeroGridCard = ({ hero }: Props) => {
   const { isFavorite, toggleFavorite } = use(FavoriteHeroContext);
 
   const handleClick = (slug: string) => {
-    console.log(slug);
     navigate(`/hero/${slug}`);
   };
 

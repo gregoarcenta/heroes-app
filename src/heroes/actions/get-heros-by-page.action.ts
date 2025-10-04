@@ -6,8 +6,8 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const getHeroesByPageAction = async (
   page: number,
-  limit: number,
-  category: Category,
+  limit: number = 6,
+  category: Category = "all",
 ): Promise<HeroesResponse> => {
   const { data } = await heroApi.get<HeroesResponse>("/", {
     params: {
